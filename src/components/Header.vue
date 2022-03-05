@@ -55,6 +55,7 @@ import { onBeforeMount, reactive, toRefs } from "vue";
 import firebase from "firebase";
 import { useRoute, useRouter } from "vue-router";
 import firebaseUser from "../store/user.js";
+import Swal from 'sweetalert2';
 
 export default {
   name: "Header",
@@ -75,7 +76,15 @@ export default {
     // }
 
     function Logout() {
-      firebase.auth().signOut();
+      firebase.auth()
+      .signOut()
+      .then((data) => {
+        Swal.fire({
+          title: 'Bye',
+          text: 'Cierre de sesión correctamente',
+          icon: 'success',
+        })
+      });
     }
     
     function Pacientes(){

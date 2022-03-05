@@ -3,6 +3,10 @@ import App from './App.vue'
 import router from './router'
 import './assets/tailwind.css'
 import firebase from "firebase"
+import VueSweetalert2 from 'vue-sweetalert2'
+
+
+
 
 const firebaseConfig = {
     apiKey: "AIzaSyDI5f7IytwXlVZ2-AtdZ2div8LG2vTX1-Y",
@@ -41,5 +45,6 @@ export const deleteUser = id => {
 }
 
 
-
-createApp(App).use(router).mount('#app')
+const app = createApp(App).use(router)
+app.use(VueSweetalert2)
+app.mount('#app')

@@ -9,22 +9,14 @@
           <div
             class="w-full h-auto bg-gray-400 hidden lg:block lg:w-1/2 bg-cover rounded-l-lg"
             style="
-              background-image: url('./../assets/dentista.jpg');
+              background-image: url('https://source.unsplash.com/eEoieXVnKGg/600x800');
             "
           ></div>
           <!-- Col -->
           <div
             class="w-full lg:w-1/2 bg-white p-5 rounded-lg lg:rounded-l-none"
           >
-            <h3 class="pt-4 text-2xl text-center">Welcome Back!</h3>
-            <div class="p-5">
-              <h3 class="text-center mb-2 font-semibold">Sign in with</h3>
-              <div class="grid grid-cols-2 gap-1">
-                <Google />
-                <GitHub />
-              </div>
-            </div>
-            <h3 class="text-center font-semibold">Or</h3>
+            <h3 class="pt-4 p-5 text-2xl text-center">Welcome Back!</h3>
             <form
               @submit.prevent="Login"
               class="px-8 pt-6 pb-8 mb-4 bg-white rounded"
@@ -101,6 +93,8 @@ import Google from "../components/LoginProviders/Google.vue";
 import GitHub from "../components/LoginProviders/GitHub.vue";
 import { reactive, toRefs } from "vue";
 import firebase from "firebase";
+import Swal from 'sweetalert2'
+
 export default {
   name: "Login",
   components: {
@@ -122,7 +116,13 @@ export default {
         .auth()
         .signInWithEmailAndPassword(state.email, state.password)
         .then((data) => {
-          console.log("Success");
+          Swal.fire({
+            title: 'Bienvenido',
+            text: 'Acceso Correcto',
+            icon: "success",
+            showConfirmButton: false,
+            timer:1500
+          });
         })
         .catch((err) => alert(err.message));
     }

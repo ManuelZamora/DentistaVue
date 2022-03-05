@@ -1,5 +1,8 @@
 import { reactive, toRefs } from "vue";
-import firebase from 'firebase'
+import firebase from 'firebase';
+import Vue from 'vue';
+import Vuex from 'vuex';
+
 
 const state = reactive({
     name: "",
@@ -20,3 +23,46 @@ export default function firebaseUser() {
         fetchUser
     }
 }
+new Vuex.Store({
+    state: {
+      db: {},
+      pacientes: []
+    },
+    getters: {
+  
+      database: state => state.db,
+  
+      articles: state => state.pacientes
+    },
+    mutations: {
+  
+      'SET_DATABASE': (state, db) => {
+        state.db = db
+      },
+  
+      'ADD_ARTICLE': (state, pacientes) => {
+        state.paciente.push(pacientes)
+      },
+  
+      'MODIFY_ARTICLE': (state, pacientes) => {
+        /* eslint-disable-next-line */
+        let pacienteFinded = state.paciente.find((item) => {
+          return paciente.id === item.id
+        })
+        pacienteFinded.Nombre = paciente.Nombre
+        pacienteFinded.Direccion = paciente.Direccion
+        pacienteFinded.Telefono = paciente.Telefono
+        pacienteFinded.Edad = article.Edad
+      },
+  
+      'DELETE_ARTICLE': (state, pacienteId) => {
+        state.paciente = state.paciente.filter((item) => {
+          return item.id !== pacienteId
+        })
+      },
+  
+      'RESET_ARTICLES': (state) => {
+        state.paciente = []
+      }
+    }
+  })
