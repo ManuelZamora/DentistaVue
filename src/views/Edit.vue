@@ -15,6 +15,9 @@
                   >First name *</label
                 >
               </p>
+              <p>
+                <H1> VICTOR </H1>
+              </p>
             </div>
             <p>
               <input
@@ -178,7 +181,7 @@ export default {
     const updateInfo = async () => {
       await updateUser(state.userId, { ...state }, (state.isLoading = true));
       // redirect to home page
-      router.push("/");
+      router.push("/dient");
       // clear fields once method is done
       state.isLoading = false;
       state.fname = "";

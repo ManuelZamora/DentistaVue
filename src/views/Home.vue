@@ -124,7 +124,7 @@ import AccInfo from "../components/AccInfo.vue";
 import Loading from "../components/Loading.vue";
 
 export default {
-  name: "Home",
+  name: "dient",
   components: {
     Header,
     AccInfo,

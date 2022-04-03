@@ -10,56 +10,48 @@
           <div
             class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8"
           >
+           <img class="inline-block object-cover w-10 h-10 rounded-full" alt="dien" src="@/assets/diente.png">
+                 
+               
+             
+              
             <div class="flex flex-row items-center justify-between p-4">
              <div class="flex flex-col w-40 "> 
               <a
-                href="#"
-                class="text-lg font-semibold tracking-widest text-white uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline"
+                href="/"
+                class="text-xl font-semibold tracking-widest text-white uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline"
                 >Dentista</a>
             </div>
+            </div>
+            
 
             <div class="flex flex-col w-40 "> 
               <a
                 href="#"
-                class="text-lg font-semibold tracking-widest text-white uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline"
+                class="text-base font-semibold tracking-widest text-white uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline"
                 >citas</a>
             </div>
 
             
             <div class="flex flex-col w-40 "> 
               <a
-                href="#"
-                class="text-lg font-semibold tracking-widest text-white uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline"
+                href="/pacientes"
+                class="text-base font-semibold tracking-widest text-white uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline"
                 >pacientes</a>
             </div>
 
-              <div class="flex flex-col w-4 "> 
-              <a
-                href="#"
-                class="text-lg font-semibold tracking-widest text-white uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline"
-                >Informacion</a>
-            </div>
+             
 
           
-             </div>
+            
 
             <nav
               class="flex-col flex-grow hidden pb-4 md:pb-0 md:flex md:justify-end md:flex-row"
             >
               <div class="relative inline-block">
-                <img
-                  class="inline-block object-cover w-10 h-10 rounded-full"
-                  :src="image"
-                  alt=""
-                />
-                <span
-                  v-if="image"
-                  class="absolute bottom-0 right-0 inline-block w-3 h-3 bg-green-600 border-2 border-white rounded-full"
-                ></span>
-                <span
-                  v-else
-                  class="absolute bottom-0 right-0 inline-block w-3 h-3 bg-gray-600 border-2 border-white rounded-full"
-                ></span>
+                
+                
+        
               </div>
 
               <button
@@ -70,12 +62,11 @@
               </button>
             </nav>
           </div>
+           </div>
         </div>
       </div>
     </div>
-  </div>
-
-
+  
 
 
 </template>

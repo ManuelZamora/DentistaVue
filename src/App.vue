@@ -1,13 +1,29 @@
 <template>
+
   <router-view/>
 </template>
 
 <script>
+import {ref} from 'vue'
 import {onBeforeMount} from 'vue';
 import {useRouter, useRoute} from 'vue-router';
 import firebase from 'firebase';
 export default {
   setup(){
+    const image = ref([
+      {
+        id: 1,
+        url: require('./assets/dentista.jpg'), 
+        name: 'imagen 1',
+
+        id: 2,
+        url: require('./assets/Tiny.jpg'), 
+        name: 'imagen 1'
+        
+      }
+    ])
+
+   
     const router = useRouter();
     const route = useRoute()
 
@@ -23,6 +39,7 @@ export default {
         }
       })
     })
+     return {image}
   }
 }
 </script>
