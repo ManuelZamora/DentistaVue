@@ -18,7 +18,19 @@ export default {
 
         id: 2,
         url: require('./assets/Tiny.jpg'), 
-        name: 'imagen 1'
+        name: 'imagen 1',
+
+        id: 3,
+        url: require('./assets/portada.png'), 
+        name: 'imagen 3',
+
+        id: 4,
+        url: require('./assets/portada1.jpg'), 
+        name: 'imagen 4',
+
+
+
+
         
       }
     ])

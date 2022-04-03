@@ -9,23 +9,25 @@
           <!-- Col -->
           <div
             class="w-full h-auto bg-gray-400 hidden lg:block lg:w-1/2 bg-cover rounded-l-lg"
-            style="
-              background-image: url('https://source.unsplash.com/eEoieXVnKGg/600x800');
-            "
-          ></div>
+            
+
+          >
+
+              <img alt="dien" src="@/assets/portada1.jpg" />
+          
+          </div>
           <!-- Col -->
           <div
             class="w-full lg:w-1/2 bg-white p-5 rounded-lg lg:rounded-l-none"
           >
-            <h3 class="pt-4 text-2xl text-center">Create Account</h3>
+            
             <div class="p-5">
-              <h3 class="text-center mb-2 font-semibold">Register with</h3>
-              <div class="grid grid-cols-2 gap-1">
-                <Google />
-                <GitHub />
-              </div>
+              
+              
+              
+
             </div>
-            <h3 class="text-center font-semibold">Or</h3>
+            
             <form
               @submit.prevent="Register"
               class="px-8 pt-6 pb-8 mb-4 bg-white rounded"
@@ -69,7 +71,7 @@
                     class="w-full col-span-2 px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline"
                     type="submit"
                   >
-                    Register Account
+                    Registrar cuenta
                   </button>
                   <div v-if="isLoading">
                     <Loading class="m-3 font-extrabold text-center" />
@@ -82,7 +84,7 @@
                   ><a
                     class="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800"
                   >
-                    Already have an account? Login
+                   Iniciar sesion
                   </a></router-link
                 >
               </div>
